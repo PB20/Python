@@ -1,10 +1,10 @@
 x = open("/home/swt/Schreibtisch/Klammercode.txt", "r") 
 Code=str(x.read()) 
 
-Fehler=0;   Kl1=[];   Kl2=[] #Fehlerart & Klammerarrays initialisieren  
+Fehler=0;   Kl1=[];   Kl2=[] # Fehlerart & Klammerarrays initialisieren  
 for Pos in range(len(Code)): 
     if Code[Pos]=='{': 
-        Kl1.append(Pos) #Werte mithilfe von .append .insert & .pop hinzufügen/löschen
+        Kl1.append(Pos) # Werte mithilfe von .append .insert & .pop hinzufügen/löschen
     elif Code[Pos]=='}': 
         if len(Kl1)>0:
             Kl1.pop(len(Kl1)-1)         
